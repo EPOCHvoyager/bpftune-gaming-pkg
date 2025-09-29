@@ -4,6 +4,7 @@
 %global commit c2b481e9c45e38d39d46c627296177fd803e307b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %define _unpackaged_files_terminate_build 0
+%define _disable_source_fetch 0
 
 Name:           bpftune
 Version:        0.2
