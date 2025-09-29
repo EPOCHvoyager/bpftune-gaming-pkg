@@ -2,12 +2,14 @@
 
 %define name        bpftune
 %define rel	    1
-%define release     %{rel}%{?dist}
-%define version     0.2
 %define _unpackaged_files_terminate_build 0
 %global _unitdir    /usr/lib/systemd/system/
 %global commit c2b481e9c45e38d39d46c627296177fd803e307b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
+
+Name:           bpftune
+Version:        0.2
+Release:        1%{?dist}
 
 # Small Makefile change
 Patch:		https://patch-diff.githubusercontent.com/raw/oracle/bpftune/pull/130.patch
