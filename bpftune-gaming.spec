@@ -1,7 +1,7 @@
 # BPF-based auto-tuning SPEC file
 %define rel	    1
 %define release     %{rel}%{?dist}
-%define version     0.2
+%define ver         0.2
 
 %global commitdate 20250929
 %global commit c2b481e9c45e38d39d46c627296177fd803e307b
@@ -14,7 +14,7 @@
 %global _unitdir    /usr/lib/systemd/system/
 
 Name:           bpftune
-Version:        %{version}.%{commitdate}.git.%{shortcommit}
+Version:        %{ver}.%{commitdate}.git.%{shortcommit}
 Release:        %{release}
 
 # Small Makefile change
@@ -58,7 +58,7 @@ rm -Rf %{buildroot}
 %{_sysconfdir}/ld.so.conf.d/libbpftune.conf
 /usr/sbin/bpftune
 %{_unitdir}/bpftune.service
-%{_libdir}/libbpftune.so.%{version}.%{rel}
+%{_libdir}/libbpftune.so.%{ver}.%{rel}
 %{_libdir}/bpftune/*
 %{_mandir}/*/*
 
