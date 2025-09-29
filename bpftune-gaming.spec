@@ -1,11 +1,9 @@
 # BPF-based auto-tuning SPEC file
 
-%define name        bpftune
-%define rel	    1
-%define _unpackaged_files_terminate_build 0
 %global _unitdir    /usr/lib/systemd/system/
 %global commit c2b481e9c45e38d39d46c627296177fd803e307b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
+%define _unpackaged_files_terminate_build 0
 
 Name:           bpftune
 Version:        0.2
@@ -32,7 +30,6 @@ BuildRequires:  clang-libs >= 11
 BuildRequires:  llvm >= 11
 BuildRequires:  llvm-libs >= 11
 BuildRequires:	python3-docutils
-Prefix:         %{_prefix}
 
 %description
 Service consisting of daemon (bpftune) and plugins which
@@ -53,7 +50,7 @@ rm -Rf %{buildroot}
 %{_sysconfdir}/ld.so.conf.d/libbpftune.conf
 /usr/sbin/bpftune
 %{_unitdir}/bpftune.service
-%{_libdir}/libbpftune.so.%{version}.%{rel}
+%{_libdir}/libbpftune.so.*
 %{_libdir}/bpftune/*
 %{_mandir}/*/*
 
