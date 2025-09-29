@@ -15,7 +15,7 @@
 
 Name:           bpftune
 Version:        %{ver}.%{commitdate}.git.%{shortcommit}
-Release:        %{release}
+Release:        %{release}^
 
 # Small Makefile change
 Patch:		https://patch-diff.githubusercontent.com/raw/oracle/bpftune/pull/130.patch
