@@ -3,6 +3,7 @@
 %define release     %{rel}%{?dist}
 %define version     0.2
 
+%global commitdate 20250929
 %global commit c2b481e9c45e38d39d46c627296177fd803e307b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
