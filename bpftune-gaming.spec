@@ -39,7 +39,7 @@ Service consisting of daemon (bpftune) and plugins which
 support auto-tuning of Linux via BPF observability.
 
 %prep
-%autosetup -q -n bpftune-%{commit}
+%autosetup -n bpftune-%{commit}
 
 %build
 make
