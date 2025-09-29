@@ -54,4 +54,5 @@ rm -Rf %{buildroot}
 %{_libdir}/bpftune/*
 %{_mandir}/*/*
 
+%changelog
 %autochangelog
