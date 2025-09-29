@@ -1,12 +1,12 @@
 # BPF-based auto-tuning SPEC file
 
 %define name        bpftune
-%define rel	    1
+%define rel	    2
 %define release     %{rel}%{?dist}
 %define version     0.2
 %define _unpackaged_files_terminate_build 0
 %global _unitdir    /usr/lib/systemd/system/
-%global commit d094e5dcedeb596399a41aaf5bd5901b1d8ee089
+%global commit c2b481e9c45e38d39d46c627296177fd803e307b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 # Small Makefile change
