@@ -33,8 +33,6 @@ BuildRequires:  clang-libs >= 11
 BuildRequires:  llvm >= 11
 BuildRequires:  llvm-libs >= 11
 BuildRequires:	python3-docutils
-Version:        %{version}
-Release:        %{release}
 Prefix:         %{_prefix}
 
 %description
