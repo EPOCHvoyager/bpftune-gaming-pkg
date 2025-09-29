@@ -18,7 +18,6 @@ License:        GPLv2 WITH Linux-syscall-note
 URL:		https://github.com/shanefagan/bpftune
 Source:		%{url}/archive/%{commit}/%{name}-%{commit}.tar.gz
 
-Name:           %{name}
 Summary:        BPF/tracing tools for auto-tuning Linux
 Group:          Development/Tools
 Requires:       libbpf >= 0.6
