@@ -6,13 +6,15 @@
 %define version     0.2
 %define _unpackaged_files_terminate_build 0
 %global _unitdir    /usr/lib/systemd/system/
+%global commit d094e5dcedeb596399a41aaf5bd5901b1d8ee089
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 # Small Makefile change
 Patch:		https://patch-diff.githubusercontent.com/raw/oracle/bpftune/pull/130.patch
 
 License:        GPLv2 WITH Linux-syscall-note
 URL:		https://github.com/shanefagan/bpftune
-Source:		%{url}/archive/refs/refs/heads/main.zip
+Source:		%{url}/archive/%{commit}/%{name}-%{commit}.tar.gz
 
 Name:           %{name}
 Summary:        BPF/tracing tools for auto-tuning Linux
@@ -31,7 +33,6 @@ BuildRequires:  llvm-libs >= 11
 BuildRequires:	python3-docutils
 Version:        %{version}
 Release:        %{release}
-Source:         bpftune-%{version}.tar.bz2
 Prefix:         %{_prefix}
 
 %description
