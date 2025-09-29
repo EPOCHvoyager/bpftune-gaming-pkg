@@ -1,15 +1,20 @@
 # BPF-based auto-tuning SPEC file
+%define rel	    1
+%define release     %{rel}%{?dist}
+%define version     0.2
 
-%global _unitdir    /usr/lib/systemd/system/
 %global commit c2b481e9c45e38d39d46c627296177fd803e307b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
+
 %define _unpackaged_files_terminate_build 0
 %define _disable_source_fetch 0
 %define _default_patch_fuzz 2
 
+%global _unitdir    /usr/lib/systemd/system/
+
 Name:           bpftune
-Version:        0.2
-Release:        %autorelease
+Version:        %{version}.%{commitdate}.git.%{shortcommit}
+Release:        %{release}
 
 # Small Makefile change
 Patch:		https://patch-diff.githubusercontent.com/raw/oracle/bpftune/pull/130.patch
@@ -52,7 +57,7 @@ rm -Rf %{buildroot}
 %{_sysconfdir}/ld.so.conf.d/libbpftune.conf
 /usr/sbin/bpftune
 %{_unitdir}/bpftune.service
-%{_libdir}/libbpftune.so.*
+%{_libdir}/libbpftune.so.%{version}.%{rel}
 %{_libdir}/bpftune/*
 %{_mandir}/*/*
 
