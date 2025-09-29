@@ -57,12 +57,4 @@ rm -Rf %{buildroot}
 %{_libdir}/bpftune/*
 %{_mandir}/*/*
 
-%changelog
-* Wed Mar 26 2025 Alan Maguire <alan.maguire@oracle.com> - 0.2-1
-- Add support for PCP PMDA package
-* Tue May 30 2023 Alan Maguire <alan.maguire@oracle.com> - 0.1-3
-- Fix timeout retry logic in libbpftune. [Orabug: 35385703]
-* Wed May 24 2023 Alan Maguire <alan.maguire@oracle.com> - 0.1-2
-- Spec file reviewed.
-* Mon May 30 2022 Alan Maguire <alan.maguire@oracle.com> - 0.1-1
-- Initial packaging support
+%autochangelog
