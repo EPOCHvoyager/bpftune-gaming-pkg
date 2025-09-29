@@ -5,6 +5,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %define _unpackaged_files_terminate_build 0
 %define _disable_source_fetch 0
+%define _default_patch_fuzz 2
 
 Name:           bpftune
 Version:        0.2
@@ -37,7 +38,7 @@ Service consisting of daemon (bpftune) and plugins which
 support auto-tuning of Linux via BPF observability.
 
 %prep
-%setup -q -n bpftune-%{commit}
+%autosetup -n bpftune-%{commit}
 
 %build
 make
