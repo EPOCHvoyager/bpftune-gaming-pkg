@@ -9,7 +9,7 @@
 
 Name:           bpftune
 Version:        0.2
-Release:        1%{?dist}
+Release:        %autorelease
 
 # Small Makefile change
 Patch:		https://patch-diff.githubusercontent.com/raw/oracle/bpftune/pull/130.patch
