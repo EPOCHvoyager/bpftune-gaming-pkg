@@ -1,8 +1,7 @@
 # BPF-based auto-tuning SPEC file
 
 %define name        bpftune
-%define rel	    1
-%define release     %{rel}%{?dist}
+%define release     {?dist}
 %define version     0.2
 %define _unpackaged_files_terminate_build 0
 %global _unitdir    /usr/lib/systemd/system/
